@@ -23,5 +23,53 @@ GraphRAG was inspired by the challenge of extracting actionable insights from co
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/kalyansai1420/hackathon_agentai.git
+   git clone https://github.com/yourusername/hackathon_agentai.git
    cd hackathon_agentai
+   ```
+
+2. **Install Dependencies:**
+
+   ```bash
+   pip install nx-arangodb
+   pip install cugraph-cu12 --extra-index-url=https://pypi.nvidia.com
+   pip install --upgrade langchain langchain-community langchain-openai langgraph
+   pip install arango-datasets
+   pip install gradio
+   ```
+
+3. **Set Up Environment Variables:**
+
+   ```bash
+   export OPENAI_API_KEY="your_openai_api_key_here"
+   ```
+
+## Usage
+
+1. **Data Setup:**
+   - Connect to your ArangoDB instance.
+   - Load the Synthea dataset and build a NetworkX graph from the vertex and edge collections.
+
+2. **Running the Agent:**
+   - Run the Colab notebook cells in sequence.
+   - Use the provided Gradio interface to enter natural language queries and optionally visualize the results.
+   - Example queries include:
+     - "Who is connected to Node 0?"
+     - "What is the shortest path from Node 0 to Node 1?"
+     - "Which doctors treat the most chronic conditions?"
+     - "What's the most common treatment path for diabetes?"
+
+3. **Testing:**
+   - Use the test cell to run a set of sample queries and validate the agent's responses.
+
+
+## Contributing
+
+Contributions are welcome! Fork the repository and submit a pull request. For major changes, please open an issue first to discuss your ideas.
+
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or suggestions, please contact [saikalyan.maram@unh.edu](mailto:saikalyan.maram@unh.edu).
