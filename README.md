@@ -23,5 +23,5 @@ GraphRAG was inspired by the challenge of extracting actionable insights from co
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/GraphRAG.git
-   cd GraphRAG
+   git clone https://github.com/kalyansai1420/hackathon_agentai.git
+   cd hackathon_agentai
