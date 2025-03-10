@@ -29,18 +29,23 @@ GraphRAG was inspired by the challenge of extracting actionable insights from co
 
 2. **Install Dependencies:**
 
+   Run the following commands (e.g., in a Colab cell or your local environment):
+
    ```bash
-   pip install nx-arangodb
-   pip install cugraph-cu12 --extra-index-url=https://pypi.nvidia.com
-   pip install --upgrade langchain langchain-community langchain-openai langgraph
-   pip install arango-datasets
-   pip install gradio
+   !pip install nx-arangodb
+   !pip install cugraph-cu12 --extra-index-url=https://pypi.nvidia.com
+   !pip install --upgrade langchain langchain-community langchain-openai langgraph
+   !pip install arango-datasets
+   !pip install gradio
    ```
 
 3. **Set Up Environment Variables:**
 
-   ```bash
-   export OPENAI_API_KEY="your_openai_api_key_here"
+   In your notebook, set your OpenAI API key:
+
+   ```python
+   import os
+   os.environ["OPENAI_API_KEY"] = "your_openai_api_key_here"
    ```
 
 ## Usage
@@ -50,8 +55,9 @@ GraphRAG was inspired by the challenge of extracting actionable insights from co
    - Load the Synthea dataset and build a NetworkX graph from the vertex and edge collections.
 
 2. **Running the Agent:**
-   - Run the Colab notebook cells in sequence.
-   - Use the provided Gradio interface to enter natural language queries and optionally visualize the results.
+   - Open and run the Jupyter Notebook (`.ipynb`) file in Google Colab.
+   - The notebook is structured into cells that load data, define helper functions, implement specialized tools for graph analytics, and set up an interactive Gradio interface.
+   - Use the Gradio UI to enter natural language queries and optionally display visualizations.
    - Example queries include:
      - "Who is connected to Node 0?"
      - "What is the shortest path from Node 0 to Node 1?"
@@ -59,7 +65,7 @@ GraphRAG was inspired by the challenge of extracting actionable insights from co
      - "What's the most common treatment path for diabetes?"
 
 3. **Testing:**
-   - Use the test cell to run a set of sample queries and validate the agent's responses.
+   - A dedicated cell runs a set of test queries and prints responses, which helps validate the agent’s performance.
 
 
 ## Contributing
